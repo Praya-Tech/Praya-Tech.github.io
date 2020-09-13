@@ -4,6 +4,10 @@
     url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Raleway";
