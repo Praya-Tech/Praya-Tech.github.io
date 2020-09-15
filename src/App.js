@@ -9,12 +9,7 @@ function App() {
   return (
     <div>
       <NavbarTop />
-      <Image
-        src="https://tqcoders.com/static/cc1ced5b5ddaafc4ca56cced96d333c7/3897f/back.png"
-        fluid
-      />
       <About />
-      <p>Praya Tech</p>
     </div>
   );
 }
