@@ -6,7 +6,9 @@ const NavbarTop = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">PrayaTech</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <image src="../assets/PRAYA_512.png" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           id="responsive-navbar-nav"
