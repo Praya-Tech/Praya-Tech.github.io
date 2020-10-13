@@ -28,7 +28,7 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/mayuresh-kunder-7b1076183/",
       instagram: "https://www.instagram.com/mayuresh024/",
       github: "https://github.com/mayur249",
-      portfolio: "",
+      portfolio: "https://mayur249.github.io/",
       image:
         "https://avatars0.githubusercontent.com/u/44720608?s=460&u=13157c1b04628b74f26e74d7b97adce54e9e353d&v=4",
     },
