@@ -2,6 +2,14 @@ import React from "react";
 
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  Link as scrollLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 import About from "./About";
 import Home from "./Home";
@@ -35,15 +43,13 @@ const NavbarTop = () => {
                   Home
                 </Link>
               </Nav.Link>
+
+              <Nav.Link href="/#services">Services</Nav.Link>
+              <Nav.Link href="/#projects">Projects</Nav.Link>
+              <Nav.Link href="#techstack">Tech Stack</Nav.Link>
               <Nav.Link href="/about">
                 <Link to="/about" style={linkStyle}>
                   About
-                </Link>
-              </Nav.Link>
-              <Nav.Link href="/#services">Services</Nav.Link>
-              <Nav.Link href="/tech-stack">
-                <Link to="/tech-stack" style={linkStyle}>
-                  Tech Stack
                 </Link>
               </Nav.Link>
               <Nav.Link href="/contact">
