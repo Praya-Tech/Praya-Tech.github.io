@@ -46,7 +46,7 @@ const NavbarTop = () => {
 
               <Nav.Link href="/#services">Services</Nav.Link>
               <Nav.Link href="/#projects">Projects</Nav.Link>
-              <Nav.Link href="#techstack">Tech Stack</Nav.Link>
+              <Nav.Link href="/#techstack">Tech Stack</Nav.Link>
               <Nav.Link href="/about">
                 <Link to="/about" style={linkStyle}>
                   About
