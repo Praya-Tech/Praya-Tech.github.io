@@ -61,10 +61,10 @@ const NavbarTop = () => {
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
