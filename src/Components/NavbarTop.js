@@ -2,17 +2,11 @@ import React from "react";
 
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {
-  Link as scrollLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
 
 import About from "./About";
 import Home from "./Home";
+
+import { HashRouter } from "react-router-dom";
 
 const NavbarTop = () => {
   const linkStyle = {
@@ -20,7 +14,7 @@ const NavbarTop = () => {
     color: "inherit",
   };
   return (
-    <Router>
+    <HashRouter>
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Navbar.Brand href="#home">
@@ -69,7 +63,7 @@ const NavbarTop = () => {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
