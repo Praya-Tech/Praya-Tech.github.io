@@ -47,13 +47,13 @@ const NavbarTop = () => {
               <Nav.Link href="/#services">Services</Nav.Link>
               <Nav.Link href="/#projects">Projects</Nav.Link>
               <Nav.Link href="/#techstack">Tech Stack</Nav.Link>
-              <Nav.Link href="/about">
-                <Link to="/about" style={linkStyle}>
+              <Nav.Link href="/#/about">
+                <Link to="/#/about" style={linkStyle}>
                   About
                 </Link>
               </Nav.Link>
-              <Nav.Link href="/contact">
-                <Link to="/contact" style={linkStyle}>
+              <Nav.Link href="/#/contact">
+                <Link to="/#/contact" style={linkStyle}>
                   Contact Us
                 </Link>
               </Nav.Link>
