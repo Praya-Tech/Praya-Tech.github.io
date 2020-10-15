@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 import About from "./About";
 import Home from "./Home";
-
-import { HashRouter } from "react-router-dom";
 
 const NavbarTop = () => {
   const linkStyle = {
     textDecoration: "none",
     color: "inherit",
   };
+  const [route, setRoute] = useState("");
+  useEffect(() => {
+    if (!localStorage.getItem("route")) {
+      localStorage.setItem("route", "/");
+    }
+    const route = localStorage.getItem("route");
+    setRoute(route);
+  });
+
+  const redirect = () => {
+    return <Redirect to={route} />;
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("/" + event.target.href.split("/")[3]);
+    localStorage.setItem("route", "/" + event.target.href.split("/")[3]);
+    setRoute("/" + event.target.href.split("/")[3]);
+  };
   return (
-    <HashRouter>
+    <Router>
+      {redirect()}
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Navbar.Brand href="#home">
@@ -32,22 +56,26 @@ const NavbarTop = () => {
             className="justify-content-end"
           >
             <Nav className="mx-end">
-              <Nav.Link href="/">
+              <Nav.Link href="/" address="/" onClick={handleClick}>
                 <Link to="/" style={linkStyle}>
                   Home
                 </Link>
               </Nav.Link>
 
               <Nav.Link href="/#services">Services</Nav.Link>
-              <Nav.Link href="/#projects">Projects</Nav.Link>
-              <Nav.Link href="/#techstack">Tech Stack</Nav.Link>
-              <Nav.Link href="/about">
+              <Nav.Link href="/#projects" onClick={handleClick}>
+                Projects
+              </Nav.Link>
+              <Nav.Link href="/#techstack" onClick={handleClick}>
+                Tech Stack
+              </Nav.Link>
+              <Nav.Link href="/about" onClick={handleClick}>
                 <Link to="/about" style={linkStyle}>
                   About
                 </Link>
               </Nav.Link>
-              <Nav.Link href="/contact">
-                <Link to="/contact" style={linkStyle}>
+              <Nav.Link href="/#contact" onClick={handleClick}>
+                <Link to="/#contact" style={linkStyle}>
                   Contact Us
                 </Link>
               </Nav.Link>
@@ -63,7 +91,7 @@ const NavbarTop = () => {
           </Route>
         </Switch>
       </div>
-    </HashRouter>
+    </Router>
   );
 };
 

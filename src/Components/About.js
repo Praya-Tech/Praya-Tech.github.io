@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Card, Button } from "react-bootstrap";
 import { FiInstagram, FiGithub, FiLinkedin, FiUser } from "react-icons/fi";
 import Particles from "react-particles-js";
+import Footer from "./Footer";
 
 const About = () => {
   const members = [
@@ -199,7 +200,7 @@ const About = () => {
           </a>
         </div>
       </div>
-      <div className="bg-dark" id="story">
+      <div className="bg-dark pb-3" id="story">
         <h1 className="text-center text-light p-1">Our Story</h1>
         <div>
           <div className=" container text-light pb-3 ">
@@ -226,6 +227,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

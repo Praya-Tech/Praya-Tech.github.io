@@ -7,15 +7,20 @@ import Button from "react-bootstrap/Button";
 import CardDeck from "react-bootstrap/CardDeck";
 import { iconList } from "./techStackIcons";
 import "./home.css";
+import { Form, Col, Row } from "react-bootstrap";
+import Footer from "./Footer";
+import { Instagram, Linkedin, Mail } from "react-feather";
+import { FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
 
 const Home = () => {
   const navHeight = 54;
-  var n = window.screen.width > 420 ? 260 : 80;
+  var n = window.screen.width > 420 ? 350 : 400;
+  var h1 = window.screen.width > 420 ? "400%" : "600%";
   return (
     <div>
       <Particles
         style={{ position: "absolute", zIndex: "-1" }}
-        height="450%"
+        height={h1}
         width="100%"
         params={{
           particles: {
@@ -31,7 +36,7 @@ const Home = () => {
               value: n,
             },
             size: {
-              value: 4,
+              value: 5,
             },
           },
           interactivity: {
@@ -64,8 +69,8 @@ const Home = () => {
             }}
           >
             <div className="text-dark landing__title">PRAYA TECH</div>
-            <div className="landing__subtitle text-dark">
-              Helping bussiness to scale in the online world.
+            <div className="landing__subtitle text-dark text-center">
+              Helping bussiness to scale in the Digital World.
             </div>
           </div>
         </div>
@@ -241,8 +246,8 @@ const Home = () => {
         </Container>
       </section>
 
-      <section id="techstack" className="pt-3">
-        <Container>
+      <section id="techstack" className="pt-1">
+        <Container className="pb-4">
           <h1 className="text-center text-dark p-4">TechStack</h1>
           <img
             src="ts.png"
@@ -255,6 +260,194 @@ const Home = () => {
           />
         </Container>
       </section>
+
+      <section className="bg-dark" id="#contact">
+        <Container className=" pb-4">
+          <h1 className="text-center text-light p-4 ">Contact Us </h1>
+          <Row>
+            <Col sm="12" xs="12" lg="8" md="8">
+              <Form
+                action="https://formspree.io/f/mleojaea"
+                method="POST"
+                className="text-light"
+              >
+                <Row>
+                  <Col>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>First Name*</Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="First-Name"
+                        id="First-Name"
+                        placeholder="Enter First Name"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group controlId="exampleForm.ControlInput2">
+                      <Form.Label>Last Name*</Form.Label>
+                      <Form.Control
+                        name="Last-Name"
+                        id="Last-Name"
+                        type="text"
+                        placeholder="Enter last Name"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Form.Group controlId="exampleForm.ControlInput3">
+                      <Form.Label>Email address*</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="name@example.com"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group controlId="exampleForm.ControlInput4">
+                      <Form.Label>Phone Number*</Form.Label>
+                      <Form.Control
+                        type="number"
+                        name="Phone-Number"
+                        id="Phone-Number"
+                        placeholder="Enter Phone Number"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    name="Message"
+                    id="Message"
+                    placeholder="Type Your Message"
+                  />
+                </Form.Group>
+                <Button
+                  variant="primary"
+                  className="col-sm-12 mb-3"
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </Form>
+            </Col>
+            <Col sm="12" xs="12" lg="4" md="4">
+              <Container fluid>
+                <div>
+                  <h4 className="text-light text-center">Reach Us</h4>
+                </div>
+                <div>
+                  <Container fluid>
+                    <Row>
+                      <Col lg="12" md="12" sm="4" xs="4" className="pt-4 pb-4">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Button
+                            variant="light"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                            onClick={() => {
+                              window.open(
+                                "https://www.instagram.com/prayatech/",
+                                "_blank"
+                              );
+                            }}
+                          >
+                            <FiInstagram />
+                          </Button>
+                          <div
+                            className="text-light"
+                            style={{ fontSize: "14px" }}
+                          >
+                            Instagram
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg="12" md="12" sm="4" xs="4" className="pt-4 pb-4">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Button
+                            variant="light"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                            onClick={() => {
+                              window.open(
+                                "https://www.linkedin.com/company/praya-tech/",
+                                "_blank"
+                              );
+                            }}
+                          >
+                            <FiLinkedin />
+                          </Button>
+                          <div
+                            className="text-light"
+                            style={{ fontSize: "14px" }}
+                          >
+                            LinkedIn
+                          </div>
+                        </div>
+                      </Col>
+                      <Col lg="12" md="12" sm="4" xs="4" className="pt-4 pb-4">
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Button
+                            variant="light"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                            onClick={() => {
+                              window.location.href =
+                                "mailto:techpraya@gmail.com";
+                            }}
+                          >
+                            <FiMail />
+                          </Button>
+                          <div
+                            className="text-light"
+                            style={{ fontSize: "14px" }}
+                          >
+                            Mail
+                          </div>
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+              </Container>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <Footer />
     </div>
   );
 };
