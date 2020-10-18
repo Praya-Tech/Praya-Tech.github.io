@@ -19,7 +19,7 @@ import {
 const Home = () => {
   const navHeight = 54;
   var n = window.screen.width > 420 ? 400 : 100;
-  var h1 = window.screen.width > 420 ? "500%" : "150%";
+  var h1 = window.screen.width > 420 ? "500%" : "110%";
   const members = [
     {
       name: "Vishak Amin",
