@@ -508,6 +508,7 @@ const Home = () => {
                     <Form.Group controlId="exampleForm.ControlInput3">
                       <Form.Label>Email address*</Form.Label>
                       <Form.Control
+                        name="email"
                         type="email"
                         placeholder="name@example.com"
                       />
