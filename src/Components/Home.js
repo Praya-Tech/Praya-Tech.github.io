@@ -107,13 +107,14 @@ const Home = () => {
             style={{
               display: "flex",
               justifyContent: "flex-end",
+              alignItems: "flex-start",
               flexDirection: "column",
               marginLeft: "1rem",
             }}
           >
             <div className="text-dark landing__title">PRAYA TECH</div>
             <div className="landing__subtitle text-dark text-center">
-              Helping bussiness to scale up in the Digital World.
+              Helping businesses to scale up in the Digital World.
             </div>
           </div>
         </div>
